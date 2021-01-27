@@ -101,7 +101,7 @@
            event.preventDefault();
 
           let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-          console.log(contact.toString());
+          console.log(contact);
           
         });
     }

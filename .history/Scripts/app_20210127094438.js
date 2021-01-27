@@ -4,6 +4,9 @@
 //Closure - Limits scop leak
 
 "use strict";
+
+
+"use strict";
 class Contact {
   //getters and setters
   get FullName() 
@@ -143,7 +146,7 @@ class Contact {
            event.preventDefault();
 
           let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-          console.log(contact);
+          console.log(contact.toString());
           
         });
     }

@@ -140,6 +140,8 @@ let myContact =
         for (let index = 0; index < localStorage.length; index++) 
         {
           let contactData = localStorage.getItem((index+1).toString());
+
+          console.log(contact.deserialize(contactData));
            
 
           let contact = new Contact();

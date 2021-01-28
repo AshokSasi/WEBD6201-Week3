@@ -99,7 +99,7 @@ class Contact
     deserialize(data)
     {
       let propertyArray = data.split(",");
-      this.fullName = propertyArray[0];
+      this.firstName = propertyArray[0];
       this.contactNumber = propertyArray[1];
       this.emailAddress = propertyArray[2];
     }

@@ -129,35 +129,6 @@ let myContact =
         });
     }
 
-    function displayContactList()
-    {
-
-      if(localStorage.length > 0)
-      {
-        let contactList = document.getElementById("contactList");
-        let data = "";
-
-        for (let index = 0; index < localStorage.length; index++) 
-        {
-          let contactData = localStorage.getItem((index+1).toString());
-           
-
-          let contact = new Contact();
-          contact.deserialize(contactData);
-          
-          data += `<tr>
-          <th scope="row">${index+1}</th>
-          <td>${contact.fullName}</td>
-          <td>${contact.contactNumber}</td>
-          <td>${contact.emailAddress}</td>
-        </tr>`
-        }
-        contactList.innerHTML = data
-
-      }
-     
-    }
-
     function Start()
     {
         console.log("App started ...");
@@ -178,9 +149,6 @@ let myContact =
             break;
           case "Contact Us":
               displayContact();
-            break;
-            case "Contact-List":
-              displayContactList();
             break;
         }
      

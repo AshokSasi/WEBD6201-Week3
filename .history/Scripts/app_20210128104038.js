@@ -131,6 +131,8 @@ let myContact =
 
     function displayContactList()
     {
+    
+     
 
       if(localStorage.length > 0)
       {
@@ -139,9 +141,7 @@ let myContact =
 
         for (let index = 0; index < localStorage.length; index++) 
         {
-          let contactData = localStorage.getItem((index+1).toString());
-           
-
+          contactData = localStorage.getItem((index+1).toString());
           let contact = new Contact();
           contact.deserialize(contactData);
           
@@ -153,8 +153,10 @@ let myContact =
         </tr>`
         }
         contactList.innerHTML = data
+        
 
       }
+
      
     }
 

@@ -131,31 +131,23 @@ let myContact =
 
     function displayContactList()
     {
+      let contactList = document.getElementById("contactList");
 
       if(localStorage.length > 0)
       {
-        let contactList = document.getElementById("contactList");
-        let data = "";
-
-        for (let index = 0; index < localStorage.length; index++) 
-        {
-          let contactData = localStorage.getItem((index+1).toString());
-           
-
-          let contact = new Contact();
-          contact.deserialize(contactData);
+        for (let index = 1; index < localStorage.length; index++) {
+          const element = array[index];
           
-          data += `<tr>
-          <th scope="row">${index+1}</th>
-          <td>${contact.fullName}</td>
-          <td>${contact.contactNumber}</td>
-          <td>${contact.emailAddress}</td>
-        </tr>`
         }
-        contactList.innerHTML = data
-
       }
-     
+
+      contactList.innerHTML = 
+      ` <tr>
+      <th scope="row">1</th>
+      <td>Tom Smith</td>
+      <td>4164587985</td>
+      <td>tom.smith@example.com</td>
+    </tr>`
     }
 
     function Start()

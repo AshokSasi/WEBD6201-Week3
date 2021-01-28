@@ -140,10 +140,13 @@ let myContact =
         for (let index = 0; index < localStorage.length; index++) 
         {
           let contactData = localStorage.getItem((index+1).toString());
+
+          console.log(contactData);
            
 
           let contact = new Contact();
           contact.deserialize(contactData);
+          console.log(contact.deserialize(contactData))
           
           data += `<tr>
           <th scope="row">${index+1}</th>

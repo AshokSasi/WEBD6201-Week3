@@ -17,8 +17,7 @@ let myContact =
   "someOtherObject":
   {
     "friendsList" : [
-      "Peter Parker", "Tony Stark", "Stephen Strange"
-    ]
+      "Peter Parker", "Tony Stark", "Stephen Strange"]
   }
 };
 

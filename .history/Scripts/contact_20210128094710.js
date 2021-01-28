@@ -46,12 +46,6 @@ class Contact
   
     //Methods
     
-   /**
-    *This method overrides the built in toString method for the Contact class
-    *
-    * @return {string} 
-    * 
-    */
    toString() 
    {
      return `Full Name     : ${this.m_fullName} \nContact Number: ${this.m_contactNumber}\nEmail Address : ${this.m_emailAddress}`;
@@ -90,10 +84,7 @@ class Contact
      */
     deserialize(data)
     {
-      let propertyArray = data.split(",");
-      this.firstName = propertyArray[0];
-      this.contactNumber = propertyArray[1];
-      this.emailAddress = propertyArray[2];
+
     }
 
   }
